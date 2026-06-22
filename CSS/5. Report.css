@@ -44,9 +44,12 @@
   height: 16px;
   color: currentColor;
   background:
-    linear-gradient(currentColor, currentColor) left 2px bottom 2px / 3px 7px no-repeat,
-    linear-gradient(currentColor, currentColor) left 7px bottom 2px / 3px 11px no-repeat,
-    linear-gradient(currentColor, currentColor) left 12px bottom 2px / 3px 5px no-repeat;
+    linear-gradient(currentColor, currentColor) left 2px bottom 2px / 3px 7px
+      no-repeat,
+    linear-gradient(currentColor, currentColor) left 7px bottom 2px / 3px 11px
+      no-repeat,
+    linear-gradient(currentColor, currentColor) left 12px bottom 2px / 3px 5px
+      no-repeat;
 }
 
 .select-list button.active {
@@ -109,7 +112,7 @@
   margin: 0 0 10px;
   color: #34d3cc;
   font-weight: 900;
-  letter-spacing: .08em;
+  letter-spacing: 0.08em;
 }
 
 .report-page header h2 {
@@ -142,9 +145,14 @@
   height: 58px;
   margin-top: 16px;
   background:
-    linear-gradient(140deg, transparent 0 30%, #2563ff 31% 33%, transparent 34%),
+    linear-gradient(
+      140deg,
+      transparent 0 30%,
+      #2563ff 31% 33%,
+      transparent 34%
+    ),
     linear-gradient(40deg, transparent 0 50%, #14b8a6 51% 53%, transparent 54%);
-  opacity: .35;
+  opacity: 0.35;
 }
 
 .line-chart div {
