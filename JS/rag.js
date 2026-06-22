@@ -33,4 +33,24 @@ document.addEventListener("DOMContentLoaded", () => {
       ABC.toast("문서 색인이 완료되었습니다");
     }, 600);
   });
+
+  const uploadInput = document.querySelector(".upload-input");
+  const uploadBox = document.querySelector(".upload");
+  const fileList = document.querySelector(".file-list");
+
+  uploadInput?.addEventListener("change", () => {
+    const files = [...uploadInput.files];
+    if (!files.length) return;
+
+    uploadBox.querySelector("b").textContent = `${files.length}개 문서 선택됨`;
+    uploadBox.querySelector("small").textContent = files.map((file) => file.name).join(" · ");
+
+    files.forEach((file) => {
+      const item = document.createElement("li");
+      item.innerHTML = `<i>▤</i><b>${file.name}</b><small>업로드 대기</small>`;
+      fileList.prepend(item);
+    });
+
+    ABC.toast("문서가 업로드 목록에 추가되었습니다");
+  });
 });

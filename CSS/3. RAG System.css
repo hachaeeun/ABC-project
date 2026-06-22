@@ -80,6 +80,21 @@
   border-color: #d4deee;
   box-shadow: none;
   color: #7b879a;
+  cursor: pointer;
+  text-align: center;
+}
+
+.upload:hover {
+  border-color: #8fb0ff;
+  background: #f8fbff;
+}
+
+.upload-input {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  opacity: 0;
+  pointer-events: none;
 }
 
 .upload-icon {
