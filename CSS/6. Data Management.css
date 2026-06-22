@@ -84,6 +84,25 @@ td b {
   color: #1f2937;
 }
 
+.name-cell {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.name-icon {
+  display: grid;
+  width: 28px;
+  height: 28px;
+  place-items: center;
+  border-radius: 6px;
+  background: #eef1f6;
+  color: var(--blue);
+  font-size: 15px;
+  font-weight: 700;
+  line-height: 1;
+}
+
 td small {
   display: block;
   margin-top: 4px;
