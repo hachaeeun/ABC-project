@@ -1,4 +1,11 @@
 document.addEventListener("DOMContentLoaded", () => {
+  const dateEl = document.querySelector(".date");
+  if (dateEl) {
+    const today = new Date();
+    const weekday = new Intl.DateTimeFormat("ko-KR", { weekday: "long" }).format(today);
+    dateEl.textContent = `${today.getFullYear()}.${today.getMonth() + 1}.${today.getDate()} · ${weekday}`;
+  }
+
   document.querySelectorAll(".stat-card strong").forEach((value) => {
     const raw = value.textContent.replace(/,/g, "");
     const target = Number.parseFloat(raw);

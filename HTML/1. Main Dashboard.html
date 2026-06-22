@@ -37,7 +37,7 @@
       <section class="content dashboard">
         <div class="hero-row">
           <div>
-            <p class="date">2026.6.18 · 화요일</p>
+            <p class="date">2026.6.22 · 월요일</p>
             <h2>안녕하세요, 김연우님 — 오늘의 운영 현황입니다</h2>
           </div>
           <button class="btn primary">＋ 새 질문</button>
@@ -54,18 +54,23 @@
           <article class="card chart-card">
             <div class="card-head"><h3>주간 처리량</h3><span class="status green">최근 7일</span></div>
             <div class="chart-bars">
-              <span style="height:42%"></span><span style="height:64%"></span><span style="height:48%"></span><span style="height:76%"></span><span style="height:58%"></span><span style="height:70%"></span><span style="height:52%"></span>
+              <div class="bar-item"><span style="height:42%"></span><b>월</b></div>
+              <div class="bar-item"><span style="height:64%"></span><b>화</b></div>
+              <div class="bar-item"><span style="height:48%"></span><b>수</b></div>
+              <div class="bar-item"><span style="height:76%"></span><b>목</b></div>
+              <div class="bar-item"><span style="height:58%"></span><b>금</b></div>
+              <div class="bar-item"><span style="height:70%"></span><b>토</b></div>
+              <div class="bar-item"><span style="height:52%"></span><b>일</b></div>
             </div>
-            <div class="chart-labels"><span>월</span><span>화</span><span>수</span><span>목</span><span>금</span><span>토</span><span>일</span></div>
           </article>
 
           <article class="card quick-card">
             <h3>빠른 작업</h3>
             <div class="quick-grid">
-              <button>⌕<span>공공데이터 검색</span></button>
-              <button>⌗<span>이미지 라벨링</span></button>
-              <button>⇱<span>보고서 생성</span></button>
-              <button>▤<span>자연어 질의</span></button>
+              <button><span class="quick-icon quick-search">⌕</span><span>공공데이터 검색</span></button>
+              <button><span class="quick-icon">⌗</span><span>이미지 라벨링</span></button>
+              <button><span class="quick-icon">⇱</span><span>보고서 생성</span></button>
+              <button><span class="quick-icon">▤</span><span>자연어 질의</span></button>
             </div>
           </article>
 
@@ -80,10 +85,10 @@
           <article class="card activity-card">
             <h3>최근 활동</h3>
             <ul>
-              <li><span>⌗</span><b>pothole_set_2025Q2 라벨링 검수 완료</b><small>김연우 · 12분 전</small></li>
-              <li><span>⌕</span><b>공공데이터포털 ‘도로 파손 신고 현황’ 연계 동기화</b><small>시스템 · 34분 전</small></li>
-              <li><span>⇱</span><b>‘도로 파손 현황 분석 보고서’ 생성</b><small>박서준 · 1시간 전</small></li>
-              <li><span>▱</span><b>CCTV 이상행동 데이터셋 304건 업로드</b><small>이지은 · 3시간 전</small></li>
+              <li><span class="activity-icon">⌗</span><b>pothole_set_2025Q2 라벨링 검수 완료</b><small>김연우 · 12분 전</small></li>
+              <li><span class="activity-icon activity-search">⌕</span><b>공공데이터포털 ‘도로 파손 신고 현황’ 연계 동기화</b><small>시스템 · 34분 전</small></li>
+              <li><span class="activity-icon">⇱</span><b>‘도로 파손 현황 분석 보고서’ 생성</b><small>박서준 · 1시간 전</small></li>
+              <li><span class="activity-icon">▱</span><b>CCTV 이상행동 데이터셋 304건 업로드 완료</b><small>이지은 · 3시간 전</small></li>
             </ul>
           </article>
         </section>

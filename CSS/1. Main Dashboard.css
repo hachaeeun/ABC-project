@@ -14,7 +14,7 @@
   margin: 0 0 6px;
   color: #00a99d;
   font-weight: 900;
-  letter-spacing: .08em;
+  letter-spacing: 0.08em;
 }
 
 .hero-row h2 {
@@ -85,25 +85,33 @@ h3 {
 }
 
 .chart-bars {
-  height: 88px;
+  height: 118px;
   display: grid;
   grid-template-columns: repeat(7, 1fr);
+  align-items: stretch;
+  gap: 18px;
+  padding: 12px 28px 0;
+}
+
+.bar-item {
+  display: grid;
+  grid-template-rows: 1fr 22px;
+  justify-items: center;
   align-items: end;
-  gap: 24px;
-  padding: 14px 44px 0;
+  min-width: 0;
 }
 
-.chart-bars span {
+.bar-item span {
   display: block;
-  border-radius: 999px 999px 0 0;
-  background: linear-gradient(#2563ff, #8fb0ff);
+  width: 28px;
+  border-radius: 6px 6px 0 0;
+  background: linear-gradient(180deg, #2563ff 0%, #7aa2ff 100%);
+  box-shadow: 0 6px 12px rgba(37, 99, 255, 0.18);
 }
 
-.chart-labels {
-  display: grid;
-  grid-template-columns: repeat(7, 1fr);
-  padding: 0 44px;
+.bar-item b {
   color: #a0abc0;
+  font-size: 12px;
   font-weight: 800;
   text-align: center;
 }
@@ -117,8 +125,9 @@ h3 {
 
 .quick-grid button {
   display: grid;
-  grid-template-columns: 22px 1fr;
+  grid-template-columns: 24px 1fr;
   align-items: center;
+  gap: 10px;
   min-height: 64px;
   padding: 0 14px;
   border: 1px solid var(--line);
@@ -129,22 +138,25 @@ h3 {
   text-align: left;
 }
 
-.quick-grid button {
+.quick-icon {
+  display: grid;
+  width: 20px;
+  height: 20px;
+  place-items: center;
   color: var(--blue);
+  font-size: 17px;
+  font-weight: 400;
+  line-height: 1;
+  text-align: center;
 }
 
-.quick-grid button span {
+.quick-search,
+.activity-search {
+  font-size: 22px;
+}
+
+.quick-grid button span:not(.quick-icon) {
   color: #111827;
-}
-
-.quick-grid button:first-child span,
-.quick-grid button:nth-child(4) span {
-  color: #111827;
-}
-
-.quick-grid button:first-child,
-.quick-grid button:nth-child(4) {
-  color: var(--blue);
 }
 
 .model-card {
@@ -159,11 +171,18 @@ h3 {
 
 .model-row {
   display: grid;
-  grid-template-columns: 10px 1fr 80px 48px;
+  grid-template-columns: 10px 1fr 80px 58px;
   align-items: center;
   gap: 12px;
   min-height: 52px;
   border-bottom: 1px solid #e8edf4;
+}
+
+.model-row .status {
+  justify-content: center;
+  width: 58px;
+  white-space: nowrap;
+  text-align: center;
 }
 
 .model-row b,
@@ -219,21 +238,24 @@ h3 {
 
 .activity-card li {
   display: grid;
-  grid-template-columns: 28px 1fr;
+  grid-template-columns: 30px 1fr;
   gap: 10px;
   padding: 9px 0;
   border-bottom: 1px solid #e8edf4;
 }
 
-.activity-card li span {
+.activity-icon {
   grid-row: span 2;
   display: grid;
-  width: 24px;
-  height: 24px;
+  width: 26px;
+  height: 26px;
   place-items: center;
   border-radius: 6px;
   background: #eef4ff;
   color: var(--blue);
+  font-size: 17px;
+  font-weight: 400;
+  line-height: 1;
 }
 
 .activity-card small {

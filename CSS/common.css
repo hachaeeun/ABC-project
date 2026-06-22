@@ -88,10 +88,118 @@ textarea {
 
 .nav-item::before {
   content: attr(data-icon);
-  width: 18px;
+  display: grid;
+  width: 20px;
+  height: 20px;
+  place-items: center;
   color: #738097;
-  font-size: 14px;
+  font-size: 17px;
+  font-weight: 400;
+  line-height: 1;
   text-align: center;
+}
+
+.nav-item[data-icon="⌕"]::before {
+  font-size: 22px;
+}
+
+.search-line-icon {
+  position: relative;
+  display: inline-block;
+  width: 18px;
+  height: 18px;
+  flex: 0 0 auto;
+  color: var(--blue);
+  vertical-align: -4px;
+}
+
+.chat-line-icon,
+.report-line-icon {
+  position: relative;
+  display: inline-block;
+  width: 18px;
+  height: 18px;
+  flex: 0 0 auto;
+  color: var(--blue);
+  vertical-align: -4px;
+}
+
+.chat-line-icon {
+  border: 2px solid currentColor;
+  border-radius: 2px;
+}
+
+.chat-line-icon::before,
+.chat-line-icon::after {
+  content: "";
+  position: absolute;
+  left: 4px;
+  height: 2px;
+  border-radius: 999px;
+  background: currentColor;
+}
+
+.chat-line-icon::before {
+  top: 5px;
+  width: 8px;
+}
+
+.chat-line-icon::after {
+  top: 9px;
+  width: 7px;
+}
+
+.report-line-icon {
+  border: 2px solid currentColor;
+  border-radius: 2px;
+}
+
+.report-line-icon::before {
+  content: "";
+  position: absolute;
+  left: -3px;
+  top: 7px;
+  width: 7px;
+  height: 7px;
+  border-left: 2px solid currentColor;
+  border-bottom: 2px solid currentColor;
+  transform: rotate(45deg);
+}
+
+.report-line-icon::after {
+  content: "";
+  position: absolute;
+  left: 5px;
+  top: 4px;
+  width: 7px;
+  height: 2px;
+  border-radius: 999px;
+  background: currentColor;
+  box-shadow: 0 4px 0 currentColor;
+}
+
+.search-line-icon::before {
+  content: "";
+  position: absolute;
+  left: 3px;
+  top: 3px;
+  width: 8px;
+  height: 8px;
+  border: 2px solid currentColor;
+  border-radius: 50%;
+}
+
+.search-line-icon::after {
+  content: "";
+  position: absolute;
+  left: 11px;
+  top: 11px;
+  width: 6px;
+  height: 2px;
+  border-radius: 999px;
+  background: currentColor;
+  transform: rotate(45deg);
+  transform-origin: left center;
 }
 
 .nav-item.active {
