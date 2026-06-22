@@ -4,7 +4,13 @@ document.addEventListener("DOMContentLoaded", () => {
   });
 
   document.querySelectorAll(".source-toggle .switch").forEach((switchEl) => {
-    switchEl.addEventListener("click", () => switchEl.classList.toggle("off"));
+    const row = switchEl.closest(".source-toggle");
+    row?.classList.toggle("is-off", switchEl.classList.contains("off"));
+
+    switchEl.addEventListener("click", () => {
+      switchEl.classList.toggle("off");
+      row?.classList.toggle("is-off", switchEl.classList.contains("off"));
+    });
   });
 
   document.querySelector(".report-form .primary")?.addEventListener("click", (event) => {

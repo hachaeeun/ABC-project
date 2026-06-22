@@ -25,6 +25,9 @@
 }
 
 .select-list button {
+  display: flex;
+  align-items: center;
+  gap: 8px;
   min-height: 40px;
   padding: 0 12px;
   border: 1px solid var(--line);
@@ -33,6 +36,17 @@
   color: #334155;
   font-weight: 900;
   text-align: left;
+}
+
+.chart-icon {
+  display: inline-block;
+  width: 16px;
+  height: 16px;
+  color: currentColor;
+  background:
+    linear-gradient(currentColor, currentColor) left 2px bottom 2px / 3px 7px no-repeat,
+    linear-gradient(currentColor, currentColor) left 7px bottom 2px / 3px 11px no-repeat,
+    linear-gradient(currentColor, currentColor) left 12px bottom 2px / 3px 5px no-repeat;
 }
 
 .select-list button.active {
@@ -47,12 +61,18 @@
   justify-content: space-between;
   gap: 14px;
   min-height: 42px;
-  color: #334155;
+  color: #111827;
   font-weight: 800;
 }
 
+.source-toggle.is-off,
 .source-toggle.disabled {
   color: #98a5ba;
+}
+
+.report-form > .btn {
+  display: flex;
+  width: 100%;
 }
 
 .preview-zone {

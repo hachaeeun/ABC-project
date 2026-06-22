@@ -141,6 +141,8 @@ textarea {
 }
 
 .label-panel .btn {
+  display: flex;
+  width: 100%;
   margin-top: 16px;
 }
 
