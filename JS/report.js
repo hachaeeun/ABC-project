@@ -39,4 +39,41 @@ document.addEventListener("DOMContentLoaded", () => {
         ABC.toast("보고서 미리보기가 갱신되었습니다");
       }, 550);
     });
+
+  const getReportText = () => {
+    const title = document.querySelector(".report-page header h2")?.textContent.trim() || "도로 파손 현황 분석 보고서";
+    const summary = document.querySelector(".report-page section p")?.textContent.trim() || "";
+    return `${title}\n\n${summary}`;
+  };
+
+  document.querySelector(".copy-report")?.addEventListener("click", async () => {
+    try {
+      await navigator.clipboard.writeText(getReportText());
+      ABC.toast("보고서 내용이 복사되었습니다");
+    } catch {
+      ABC.toast("복사를 지원하지 않는 브라우저입니다");
+    }
+  });
+
+  document.querySelector(".pdf-report")?.addEventListener("click", () => {
+    window.print();
+  });
+
+  document.querySelector(".share-report")?.addEventListener("click", async () => {
+    const title = document.querySelector(".report-page header h2")?.textContent.trim() || "보고서";
+    const text = getReportText();
+
+    try {
+      if (navigator.share) {
+        await navigator.share({ title, text });
+        ABC.toast("공유를 완료했습니다");
+        return;
+      }
+
+      await navigator.clipboard.writeText(text);
+      ABC.toast("공유 기능이 없어 보고서 내용을 복사했습니다");
+    } catch {
+      ABC.toast("공유를 취소했거나 지원하지 않습니다");
+    }
+  });
 });
